@@ -6,37 +6,65 @@ int main(){
     system("clear");
 
     int I;
-    float A,B,C;
+    float A,B,C,temp;
 
-    printf("Insira um valor de 1 a 3: \n");
-    scanf("%d",&I);
+    printf("Escolha o valor de A: ");
+    scanf("%f",&A);
+    printf("Escolha o valor de B: ");
+    scanf("%f",&B);
+    printf("Escolha o valor de C: ");
+    scanf("%f",&C);
 
-    if(I = 1 || I == 2 || I == 3){
-        printf("Insira o valor de A: \n");
-        scanf("%f",&A);
+    system("clear");
 
-        printf("Insira o valor de B: \n");
-        scanf("%f",&B);
+    inicio:
+        printf("1. A, B e C em ordem crescente\n2. A, B e C em ordem decrescente\n3. O maior numero fica entre os dois outros numeros\n\nInsira uma entrada de 1 a 3: ");
+        scanf("%d",&I);
 
-        printf("Insira o valor de C: \n");
-        scanf("%f",&C);
+        if (I==1){
+            
+            if(A > B){
+                temp = A; A = B; B = temp;
+            }
+            if(A > C){
+                temp = A; A = C; C = temp;
+            }
+            if(B > C){
+                temp = B; B = C; C=temp;
+            }
 
-        if(I==1){
-            printf("");
+            printf("Ordem crescente:%.2f, %.2f, %.2f\n\n", A,B,C);
 
         }else if(I==2){
+            if(A < B){
+                temp = A; A = B; B = temp;
+            }
+            if(A < C){
+                temp = A; A = C; C = temp;
+            }
+            if(B < C){
+                temp = B; B = C; C=temp;
+            }
 
-        }else{
-            
+            printf("Ordem decrescente:%.2f, %.2f, %.2f\n\n", A,B,C);
+
+        } else if(I == 3){
+            if(A>B & A>C){
+                printf("O maior numero no meio:%.2f, %.2f, %.2f\n\n",B,A,C);
+            }
+
+            if(B>A & B>C){
+                printf("O maior numero no meio:%.2f,%.2f,%.2f\n\n",A,B,C);
+            }
+
+            if(C>A & C>B){
+                printf("O maior numero no meio:%.2f,%.2f,%.2f\n\n",A,C,B);
+            }
+        } else{
+            printf("insira um valor valido!\n\n");
+            goto inicio;
         }
 
 
-
-    }
-    else{
-        printf("Insira um valor valido!");
-    }
-
-
-    return 0;
+        return 0;
 }
