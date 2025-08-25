@@ -1,16 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-//lembrar que pra executar isso no linux tem que abrir o arquivo com -lm
 
 int main(){
-    system("cls");//ou clear no linux
 
     float a,b,c,delta,x1,x2;
 
     inicio:
+        system("cls");
+
         printf("insira o valor de a,b e c: ");
         scanf("%f %f %f", &a,&b,&c);
+        if(a == 0){
+            printf("em equacoes quadraticas o valor de A nao pode ser zero!");
+            getchar();
+            goto inicio;
+        }
 
         system("cls");
 
