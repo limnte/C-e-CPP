@@ -5,107 +5,58 @@
 int main(){
     system("clear");
 
-    int O,P;
-    float imp,peso,gm,pt;
+    int codprod, codpais;
+    float PQ,PG,PPG,PT,IMP,VIMP;
 
-    printf("Insira o codigo do produto (1-10): ");
-    scanf("%d",&P);
+    printf("Insira o codigo do produto(1-10): ");
+    scanf("%d",&codprod);
 
-    printf("\nInsira o peso do produto em kg: ");
-    scanf("%f",&peso);
+    if(codprod >=1 && codprod <= 4){
+        PPG = 10;
+    }else if(codprod >= 5 && codprod <= 7){
+        PPG = 25;
+    }else if(codprod >= 8 && codprod <= 10){
+        PPG = 35;
+    }else{
+        printf("\nCodigo de produto invalido!");
+        return 1;
+    }
 
-    printf("\nInsira o codigo do pais de origem: ");
-    scanf("%d",&O);
+    printf("Insira o codigo do pais(1-3): ");
+    scanf("%d",&codpais);
 
+    switch (codpais){
+        case 1:
+            IMP = 0;
+            break;
+        case 2:
+            IMP = 0.15;
+            break;
+        case 3:
+            IMP = 0.25;
+            break;
+        default:
+            printf("Codigo do pais invalido!");
+            return 1;
+    }
+
+    printf("\nInsira o peso do produto em quilos: ");
+    scanf("%f",&PQ);
+
+    PG = PQ * 1000; //o peso em gramas
+
+    printf("\nPeso do produto em gramas: %.2f",PG);
+    getchar();
     system("clear");
 
-    gm = peso * 1000;
-    printf("O peso do produto em gramas:%.2f",gm);
+    
 
-    if(P == 1 || P == 2 || P == 3 || P == 4){
-        pt = (gm * 10)/ 100;
-        printf("\nO preco total do produto:R$%.2f\n",pt);
-
-        if(O == 1){
-            imp = 0;
-            printf("\nO valor do imposto e de:R$0");
-
-            printf("\nO valor do total do produto e de R$%.2f\n\n",pt+imp);
-
-        }else if(O == 2){
-            imp = pt * 0.15;
-
-            printf("\nO valor do imposto e de:R$%.2f",imp);
-
-            printf("\nO valor do total do produto e de R$%.2f\n\n",pt+imp);
-
-        }else if(O == 3){
-            imp = pt * 0.25;
-
-            printf("\nO valor do imposto e de:R$%.2f",imp);
-
-            printf("\nO valor do total do produto e de R$%.2f\n\n",pt+imp);
-
-        }else{
-            printf("\n Codigo de origem invalido");
-        }
-        
-    }else if(P == 5 || P == 6 || P == 7){
-        pt = (gm * 35)/100;
-        printf("\nO preco total do produto:R$%.2f",pt);
-
-        if(O == 1){
-            imp = 0;
-            printf("\nO valor do imposto e de:R$0");
-
-            printf("\nO valor do total do produto e de R$%.2f\n\n",pt+imp);
-
-        }else if(O == 2){
-            imp = pt * 0.15;
-
-            printf("\nO valor do imposto e de:R$%.2f",imp);
-
-            printf("\nO valor do total do produto e de R$%.2f\n\n",pt+imp);
-
-        }else if(O == 3){
-            imp = pt * 0.25;
-
-            printf("\nO valor do imposto e de:R$%.2f",imp);
-
-            printf("\nO valor do total do produto e de R$%.2f\n\n",pt+imp);
-
-        }else{
-            printf("\n Codigo de origem invalido");
-        }
-
-    }else if(P == 8 || P == 9 || P == 10){
-        pt = (gm * 25)/100;
-        printf("\nO preco total do produto:R$%.2f",pt);
-
-        if(O == 1){
-            imp = 0;
-            printf("\nO valor do imposto e de:R$0");
-
-            printf("\nO valor do total do produto e de R$%.2f\n\n",pt+imp);
-
-        }else if(O == 2){
-            imp = pt * 0.15;
-
-            printf("\nO valor do imposto e de:R$%.2f",imp);
-
-            printf("\nO valor do total do produto e de R$%.2f\n\n",pt+imp);
-
-        }else if(O == 3){
-            imp = pt * 0.25;
-
-            printf("\nO valor do imposto e de:R$%.2f",imp);
-
-            printf("\nO valor do total do produto e de R$%.2f\n\n",pt+imp);
-
-        }else{
-            printf("\n Codigo de origem invalido");
-        }
-    }
+    PT = (PG * PPG)/100; //peso grama * preco(supondo que seja centavo por grama pra evitar valores absurdos)por grama
+    VIMP = PT * IMP; //preco total * imp = (valor imposto)
+    
+    printf("\nPreco total do produto: R$%.2f",PT);
+    printf("\nValor total do imposto: R$%.2f",VIMP);
+    printf("\nValor total com imposto: R$%.2f",PT + VIMP);
 
     return 0;
 }
