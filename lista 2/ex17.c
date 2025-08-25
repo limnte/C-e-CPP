@@ -20,7 +20,7 @@ int main(){
             x1 = (-b + sqrt(delta))/(2*a);
             x2 = (-b - sqrt(delta))/(2*a);
 
-            printf("\nx1 = %f, x2 = %f\n\n",x1,x2);
+            printf("\nx1 = %.2f, x2 = %.2f\n\n",x1,x2);
         }else{
             printf("\nraiz imaginaria sem valor real\n\n");
             goto inicio;
