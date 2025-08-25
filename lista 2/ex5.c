@@ -13,7 +13,7 @@ int main(){
 
         if (!(a <= b && b <= c)){
             printf("Erro: os numeros devem estar em ordem crescente!. \n");
-            system("Pause");
+            system("Pause"); //tanto o pause quanto o cls nao funcionam em base linux
             system("cls");
             goto inicio;
         }

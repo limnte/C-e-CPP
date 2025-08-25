@@ -3,30 +3,32 @@
 #include <math.h>
 
 int main(){
-    inicio:
-        system("clear");
+    system("clear");
 
-        int hora,min,hora2,min2,resultadoh, resultadom;
+    int hora,minuto,hora2,minuto2,tempoH,tempoM;
 
-        printf("Insira o horario de comeco do jogo: ");
-        scanf("%d %d",&hora,&min);
+    printf("Digite o horario de inicio do jogo(00 00): ");
+    scanf("%d %d",&hora,&minuto);
 
-        printf("\nInsira o horario de termino do jogo: ");
-        scanf("%d %d",&hora2,&min2);
+    printf("\nDigite o horario de fim do jogo(00 00): ");
+    scanf("%d %d",&hora2,&minuto2);
 
-        resultadoh = hora2 - hora;
-        resultadom = min2 - min;
+    system("clear");
 
-        system("clear");
+    tempoH = hora2 - hora;
+    tempoM = minuto2 - minuto;
 
-        if (resultadoh > 24)
-        {
-            printf("o horario inserido nao esta correto!");
-            goto inicio;
-        } else {
-            printf("o jogo tem uma duracao de %d:%dh\n\n",resultadoh,resultadom);
-        } 
+     if(tempoM < 0){
+        tempoM += 60;
+        tempoH -= 1;
+    }
+
+    if(tempoH < 0){
+        tempoH += 24;
+    }
+
+    printf("A duracao do jogo foi de     %d:%dh",tempoH,tempoM);
 
 
-        return 0;
+    return 0;
 }

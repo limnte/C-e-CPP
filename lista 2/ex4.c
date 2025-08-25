@@ -15,7 +15,7 @@ int main() {
 
         if (n1 > n2 && n2 > n3) {
             printf("ordem crescente: %.2f, %.2f, %.2f\n", n1, n2, n3);
-            break; // sai do loop se for válido
+            break;
         }
         else if (n1 > n3 && n3 > n2) {
             printf("ordem crescente: %.2f, %.2f, %.2f\n", n1, n3, n2);

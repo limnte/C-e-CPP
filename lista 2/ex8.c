@@ -37,7 +37,7 @@
                         goto inicio2;
 
                     }else{
-                        resultado = sqrt(raiz);//sqrt nao funciona no linux sem chamar -lm no terminal lol, mas o codigo funciona.
+                        resultado = sqrt(raiz);//sqrt nao funciona no linux sem chamar -lm no terminal, mas o codigo funciona.
 
                         printf("a raiz quadrada de %.2lf = %.2lf\n",raiz,resultado);
                     }

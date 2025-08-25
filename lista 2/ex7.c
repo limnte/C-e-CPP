@@ -37,7 +37,7 @@ int main(){
 
         }else if(I==2){
             if(A < B){
-                temp = A; A = B; B = temp;
+                temp = A; A = B; B = temp;//verifica se a eh menor que b, se for, troca
             }
             if(A < C){
                 temp = A; A = C; C = temp;
