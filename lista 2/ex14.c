@@ -3,7 +3,7 @@
 #include <math.h>
 
 int main(){
-    system("clear");
+    system("cls");
 
     float s,boni,aux,ns;
 

@@ -3,7 +3,7 @@
 #include <math.h>
 
 int main(){
-    system("clear");
+    system("cls");
 
     int codestado,codcarga;
     float imp,vimp,pesot,pesoq,ppq,pc,vt;

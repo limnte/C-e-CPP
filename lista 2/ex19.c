@@ -3,7 +3,7 @@
 #include <math.h>
 
 int main(){
-    system("clear");
+    system("cls");
 
     float alt,peso;
 
@@ -13,7 +13,7 @@ int main(){
     printf("\nInsira seu peso: ");
     scanf("%f",&peso);
 
-    system("clear");
+    system("cls");
 
     if(alt < 120){
         if(peso <= 60){

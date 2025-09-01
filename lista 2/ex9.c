@@ -3,7 +3,7 @@
 #include <time.h> //biblioteca que inclui funcoes de data e hora do sistema
 
 int main(){
-    system("clear");
+    system("cls");
 
     time_t agora;//variavel que armazena o tempo atual do sistema em seg
     struct tm*info;

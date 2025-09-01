@@ -3,7 +3,7 @@
 #include <math.h>
 
 int main(){
-    system("clear");
+    system("cls");
 
     int codprod, codpais;
     float PQ,PG,PPG,PT,IMP,VIMP;
@@ -47,7 +47,7 @@ int main(){
 
     printf("\nPeso do produto em gramas: %.2f",PG);
     getchar();
-    system("clear");
+    system("cls");
 
     
 

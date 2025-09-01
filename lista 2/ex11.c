@@ -3,7 +3,7 @@
 #include <math.h>
 
 int main(){
-    system("clear");
+    system("cls");
 
     int hora,minuto,hora2,minuto2,tempoH,tempoM;
 

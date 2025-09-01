@@ -6,7 +6,7 @@ int main(){
     int I;
     float salario,imposto,nsalario;
 
-    system("clear");
+    system("cls");
     printf("Menu de opcoes:\n");
     printf("1.Imposto\n2.Novo salario\n3.Classificacao\n\n");
     printf("Digite a opcao desejada -> ");

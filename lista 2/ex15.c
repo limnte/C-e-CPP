@@ -3,7 +3,7 @@
 #include <math.h>
 
 int main(){
-    system("clear");
+    system("cls");
 
     float sm,st,sb,sl,ht,vht,d,he,vhe,imp,grat;
 

@@ -3,7 +3,7 @@
 #include <math.h>
 
 int main(){
-    system("clear");
+    system("cls");
 
     int I;
     float A,B,C,temp;
@@ -15,7 +15,7 @@ int main(){
     printf("Escolha o valor de C: ");
     scanf("%f",&C);
 
-    system("clear");
+    system("cls");
 
     inicio:
         printf("1. A, B e C em ordem crescente\n2. A, B e C em ordem decrescente\n3. O maior numero fica entre os dois outros numeros\n\nInsira uma entrada de 1 a 3: ");

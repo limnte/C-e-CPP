@@ -6,7 +6,7 @@ int main() {
     float n1, n2, n3;
 
     while (1) {  // loop infinito
-        system("clear");
+        system("cls");
 
         printf("Insira 3 numeros: \n");
         scanf("%f", &n1);

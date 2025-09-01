@@ -3,7 +3,7 @@
     #include <math.h>
 
     int main(){
-        system("clear");
+        system("cls");
 
         float a,b, soma;
         int opt;
@@ -14,7 +14,7 @@
             printf("\n1. Somar dois numeros\n2. Raiz quadrada de um numero\n\nSelecione uma opcao:");
             scanf("%d",&opt);
 
-            system("clear");
+            system("cls");
 
             if(opt == 1){
                 printf("Insira dois valores para realizar a soma: ");
@@ -22,7 +22,7 @@
 
                 soma = a + b;
 
-                system("clear");
+                system("cls");
 
                 printf("%.2f + %.2f = %.2f\n\n",a,b,soma);
 

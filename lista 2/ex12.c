@@ -7,7 +7,7 @@ int main(){
     float sb,am,sam;
 
     inicio:
-        system("clear");
+        system("cls");
         printf("Codigos\n");
         printf("1- Escrituario\n2- Secretario\n3- Caixa\n4- Gerente\n5- Diretor\n\n");
         printf("Insira o codigo do seu cargo: ");

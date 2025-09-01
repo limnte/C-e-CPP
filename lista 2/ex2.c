@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <ncurses.h> //biblioteca mais comum no linux ja que a conio.h nao funciona (so pra pegar o getch()).
+#include <conio.h> 
 
 int main(){
-    system("clear");//no windows e cls, no linux se usa clear lol
+    system("cls");//no windows e cls, no linux se usa clear lol
 
     float n1,n2,n3,soma, exame;
 
