@@ -13,7 +13,7 @@ int main(){
     printf("\nDigite o horario de fim do jogo(00 00): ");
     scanf("%d %d",&hora2,&minuto2);
 
-    system("clear");
+    system("cls");
 
     tempoH = hora2 - hora;
     tempoM = minuto2 - minuto;
